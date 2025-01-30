@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test0": "mocha -r esm test/exercise_0.test.mjs",
+    "start": "node server.js", 
+     "test0": "mocha test/exercise_0.test.mjs",
     "test1": "mocha -r esm test/exercise_1.test.mjs",
     "test2": "mocha -r esm test/exercise_2.test.mjs",
     "test3": "mocha -r esm test/exercise_3.test.mjs",
@@ -20,11 +20,11 @@
     "esm": "^3.2.25",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mocha": "^10.7.0",
     "mongoose": "^8.5.1",
     "supertest": "^7.0.0"
   },
   "devDependencies": {
-    "chai-http": "^5.0.0"
+    "chai-http": "^5.0.0",
+    "mocha": "^11.1.0"
   }
 }

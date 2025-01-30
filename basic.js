@@ -1,6 +1,7 @@
 // Function to check data types
 function getDataTypes() {
-    return null
+   const { number, string, array, object } = { number:4,string:"4",array:[],object:{'prop':"value"}}
+    return  { number, string, array, object }
 }
 
 
