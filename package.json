@@ -13,7 +13,8 @@
     "test4": "cross-env NODE_ENV=test  mocha  test/exercise_4.test.mjs",
     "testAll": "cross-env NODE_ENV=test  mocha  test/*.test.mjs",
 "test2-watch": "cross-env NODE_ENV=test nodemon --exec 'mocha test/exercise_2.test.mjs' --watch 'test/exercise_2.test.mjs' --ext 'mjs,js,json'",
-"test3-watch": "cross-env NODE_ENV=test nodemon --exec 'mocha test/exercise_3.test.mjs' --watch 'test/exercise_3.test.mjs' --ext 'mjs,js,json'"
+"test3-watch": "cross-env NODE_ENV=test nodemon --exec 'mocha test/exercise_3.test.mjs' --watch 'test/exercise_3.test.mjs' --ext 'mjs,js,json'",
+"test4-watch": "cross-env NODE_ENV=test nodemon --exec 'mocha test/exercise_4.test.mjs' --watch 'test/exercise_4.test.mjs' --ext 'mjs,js,json'"
   },
   
 
