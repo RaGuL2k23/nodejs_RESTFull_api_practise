@@ -9,7 +9,7 @@ exports.authenticateToken = function (req, res, next) {
     
     var authHeader = req.headers['authorization'];
     var token = authHeader && authHeader.split(' ')[1]; // Bearer TOKEN
-    console.log("token in ", {token});
+    console.log("header is " , {authHeader},  "token in ", {token});
     
     if (token == null) return res.status(401).json({ message: 'Unauthorized' });
     jwt.verify(token, SECRET_KEY, function (err, user) {

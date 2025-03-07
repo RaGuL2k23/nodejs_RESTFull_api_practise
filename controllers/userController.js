@@ -41,7 +41,7 @@ exports.login = function (req, res) {
 };
 
 // Example protected route
-exports.protectedRoute = function (req, res,next) {
+exports.protectedRoute = function (req, res) {
     res.status(200).json({ message: 'Protected content accessed' });
      
 };
