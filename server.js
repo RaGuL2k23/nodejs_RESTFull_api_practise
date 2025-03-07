@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 
 require("dotenv").config();
-''
+ 
 
 const simpleApiRoute = require('./routes/simpleApiRoute')
 const itemsRouter = require("./routes/itemsRoute")
@@ -32,8 +32,14 @@ app.use("/api/products",productRouter)
 app.use("/api/users",userRouter)
 
 
+ 
+if (process.env.NODE_ENV !== 'test') {
+  const port = 3000;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
 
-var port = 3100;
-app.listen(port)
+
 
 module.exports = app
