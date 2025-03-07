@@ -3,7 +3,7 @@ import request from 'supertest';
 import mongoose from 'mongoose';
 import app from '../server.js'; // Adjust the path if necessary
 
-const MONGO_URI = 'mongodb://localhost:27017/testdatabase';
+const MONGO_URI =  process.env.MONGO_URI;
 let server;
 let testProductId; // To store ID of the created product for testing
 
