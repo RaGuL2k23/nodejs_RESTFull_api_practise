@@ -11,7 +11,8 @@
     "test2": "cross-env NODE_ENV=test  mocha  test/exercise_2.test.mjs",
     "test3": "cross-env NODE_ENV=test  mocha  test/exercise_3.test.mjs",
     "test4": "cross-env NODE_ENV=test  mocha  test/exercise_4.test.mjs",
-    "testAll": "cross-env NODE_ENV=test  mocha  test/*.test.mjs"
+    "testAll": "cross-env NODE_ENV=test  mocha  test/*.test.mjs",
+"test2-watch": "cross-env NODE_ENV=test nodemon --exec 'mocha test/exercise_2.test.mjs' --watch 'test/exercise_2.test.mjs' --ext 'mjs,js,json'"
   },
   "author": "",
   "license": "ISC",

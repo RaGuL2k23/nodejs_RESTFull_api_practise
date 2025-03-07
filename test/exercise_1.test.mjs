@@ -2,6 +2,7 @@
 
 import request from 'supertest';
 import app from '../server.js';
+import mongoose from 'mongoose';
 let server;
 
 // Start the server before running tests
@@ -10,10 +11,17 @@ before(done => {
 });
 
 // Stop the server after tests are done
-after(done => {
+after(async function() {
+  this.timeout(5000);  // Increase timeout to 5 seconds
+
   console.log("everything is done rocky");
-  
-  server.close(done);
+
+  // Close MongoDB connection and wait for it to finish
+  await mongoose.connection.close();
+  console.log('MongoDB connection closed');
+
+  // Then close the server
+  await new Promise(resolve => server.close(resolve));
 });
 
 describe('Simple API Tests', () => {
